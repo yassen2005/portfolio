@@ -4,350 +4,604 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yassen Shazly - Junior .NET Developer and Software Engineer Portfolio">
-    <meta name="theme-color" content="#0a192f">
-    <title>Yassen Shazly | Software Engineer & .NET Developer</title>
-
-    <!-- Google Fonts -->
+    <title>Yassen Aboelhassan | Junior Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Yassen Aboelhassan – Junior Full-Stack Software Engineer skilled in .NET, Node.js, Express.js, and modern frontend technologies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark-theme">
-
-    <!-- Background Elements -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-
-    <!-- Navigation -->
-    <header id="header">
-        <nav class="navbar container">
-            <div class="logo">
-                <a href="#home"><span>
-                        << /span>yassen<span>/></span></a>
-            </div>
-            <ul class="nav-links">
+<body>
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>YS<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link btn-primary-outline">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">
+                    <span class="wave">👋</span> Hello, I'm
+                </p>
+                <h1 class="hero-name">
+                    Yassen <span class="gradient-text">Aboelhassan</span>
+                </h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">I'm a </span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Passionate Junior Software Engineer specializing in building robust, scalable applications
+                    using <strong>.NET</strong>, <strong>Node.js</strong>, and modern frontend technologies.
+                    Turning ideas into elegant, high-performance digital solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>+
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>+
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="3">0</span>+
+                        <span class="stat-label">Platforms</span>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <div class="image-ring"></div>
+                    <img src="./assets/profile.jpg" alt="Yassen Aboelhassan" class="profile-img">
+                </div>
+                <div class="floating-badge badge-dotnet">
+                    <i class="fab fa-microsoft"></i> .NET
+                </div>
+                <div class="floating-badge badge-node">
+                    <i class="fab fa-node-js"></i> Node.js
+                </div>
+                <div class="floating-badge badge-react">
+                    <i class="fab fa-react"></i> React
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content fade-in-up">
-                    <p class="greeting">Hi, my name is</p>
-                    <h1 class="name">Yassen Shazly.</h1>
-                    <h2 class="title">I build robust digital solutions.</h2>
-                    <p class="tagline">
-                        Junior <strong>.NET Developer</strong> | <strong>Software Engineer</strong> | <strong>AI
-                            Enthusiast</strong>
+    <!-- ====== ABOUT SECTION ====== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;About /&gt;</span>
+                <h2 class="section-title">Get To Know <span class="gradient-text">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <h3 class="about-subtitle">Who I Am</h3>
+                    <p class="about-text">
+                        I'm a <strong>Junior Software Engineer</strong> with a deep passion for creating
+                        impactful digital solutions. My expertise spans across <strong>backend development</strong>
+                        with .NET and Node.js/Express.js, combined with solid <strong>frontend skills</strong>
+                        that make me a versatile full-stack developer.
                     </p>
-                    <p class="description">
-                        I specialize in building exceptional RESTful APIs, modern web applications, and scalable backend
-                        architectures. I'm passionate about clean code, problem-solving, and the fascinating
-                        intersection of software engineering and Artificial Intelligence.
+                    <p class="about-text">
+                        I believe in writing clean, maintainable code and building applications that are not
+                        only functional but also deliver exceptional user experiences. Whether it's a web application,
+                        mobile app, or desktop software—I bring the same level of dedication and quality.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <span class="info-label">Name</span>
+                                <span class="info-value">Yassen Aboelhassan</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Role</span>
+                                <span class="info-value">Junior Software Engineer</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <span class="info-value">yassenshazly253@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">01159478308</span>
+                            </div>
+                        </div>
                     </div>
+                    <a href="assets/Yassen_Shazly_CV.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
-                <div class="hero-image-wrapper fade-in-up delay-1">
-                    <!-- Placeholder, will replace with user's profile image if requested, else stylized element -->
-                    <div class="hero-image-overlay"></div>
-                    <img src="assets/profile.jpg" alt="Yassen Shazly Profile" class="hero-image"
-                        onerror="this.src='https://via.placeholder.com/350x450?text=Developer+Profile';">
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <div class="section-title fade-in-up">
-                    <span class="num">01.</span>
-                    <h2>About Me</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="about-content">
-                    <div class="about-text fade-in-up">
-                        <p>
-                            Hello! I'm Yassen, a passionate software engineer based in Egypt with a profound interest in
-                            crafting efficient and scalable software systems. My journey into programming started with a
-                            deep curiosity about how computers solve complex problems, which naturally led me to study
-                            computer science.
-                        </p>
-                        <p>
-                            Currently, I am focusing on mastering the <strong>.NET ecosystem</strong>, building robust
-                            ASP.NET Core APIs, and exploring modern frontend development. Beyond web development, I am
-                            an avid <strong>Artificial Intelligence enthusiast</strong>, constantly learning about
-                            machine learning concepts and how AI can be integrated into everyday software to create
-                            smarter, more intuitive user experiences.
-                        </p>
-                        <p>
-                            When I'm not coding, you'll find me reading about new tech trends, exploring open-source
-                            projects, or diving into advanced algorithms.
-                        </p>
+                <div class="about-cards reveal">
+                    <div class="experience-card">
+                        <div class="card-icon"><i class="fas fa-server"></i></div>
+                        <h4>Backend Development</h4>
+                        <p>.NET (C#) & Node.js/Express.js – Building robust APIs and services</p>
                     </div>
-                    <div class="about-stats fade-in-up delay-1">
-                        <div class="stat-card">
-                            <i class="fa-solid fa-code stat-icon"></i>
-                            <h3>Software Engineering</h3>
-                            <p>Clean architecture & design patterns expert</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fa-brands fa-microsoft stat-icon" style="color:#5c2d91;"></i>
-                            <h3>.NET Development</h3>
-                            <p>C#, ASP.NET Core, APIs</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fa-solid fa-brain stat-icon"></i>
-                            <h3>AI Enthusiast</h3>
-                            <p>Machine Learning concepts & integrations</p>
-                        </div>
+                    <div class="experience-card">
+                        <div class="card-icon"><i class="fas fa-palette"></i></div>
+                        <h4>Frontend Development</h4>
+                        <p>HTML, CSS, JavaScript & React – Crafting beautiful user interfaces</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h4>Database Design</h4>
+                        <p>SQL Server & MongoDB – Designing efficient data architectures</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills section glass-bg">
-            <div class="container">
-                <div class="section-title fade-in-up">
-                    <span class="num">02.</span>
-                    <h2>Technical Skills</h2>
-                    <div class="line"></div>
+    <!-- ====== SERVICES SECTION ====== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;Services /&gt;</span>
+                <h2 class="section-title">What I <span class="gradient-text">Offer</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Full Stack Web Development</h3>
+                    <p class="service-desc">
+                        End-to-end web application development from pixel-perfect frontends to powerful
+                        backend APIs. Using .NET, Node.js, React, and modern databases to deliver
+                        complete, production-ready solutions.
+                    </p>
+                    <div class="service-tags">
+                        <span class="tag">.NET</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">SQL</span>
+                    </div>
                 </div>
 
-                <div class="skills-grid">
-                    <!-- Backend & DB -->
-                    <div class="skill-category fade-in-up">
-                        <h3 class="category-title"><i class="fa-solid fa-server"></i> Backend & Database</h3>
+                <div class="service-card reveal">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Desktop App Development</h3>
+                    <p class="service-desc">
+                        Powerful desktop applications with modern UI and robust functionality.
+                        Creating enterprise-grade software that runs efficiently on Windows
+                        with rich user experiences.
+                    </p>
+                    <div class="service-tags">
+                        <span class="tag">WPF</span>
+                        <span class="tag">WinForms</span>
+                        <span class="tag">Electron</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ====== SKILLS SECTION ====== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;Skills /&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Tech Stack</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>C#</span>
-                                <span>85%</span>
+                                <span class="skill-name"><i class="fab fa-microsoft"></i> C# / .NET</span>
+                                <span class="skill-percent">85%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="85%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>.NET / ASP.NET Core</span>
-                                <span>80%</span>
+                                <span class="skill-name"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="skill-percent">80%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="80%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>SQL Server</span>
-                                <span>75%</span>
+                                <span class="skill-name"><i class="fas fa-bolt"></i> Express.js</span>
+                                <span class="skill-percent">80%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="75%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-cogs"></i> ASP.NET Core</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Frontend -->
-                    <div class="skill-category fade-in-up delay-1">
-                        <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
-
+                </div>
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>HTML & CSS</span>
-                                <span>90%</span>
+                                <span class="skill-name"><i class="fab fa-html5"></i> HTML5</span>
+                                <span class="skill-percent">90%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="90%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>80%</span>
+                                <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span class="skill-percent">88%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="80%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Responsive Design</span>
-                                <span>85%</span>
+                                <span class="skill-name"><i class="fab fa-js-square"></i> JavaScript</span>
+                                <span class="skill-percent">85%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="85%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-react"></i> React</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tools & Others -->
-                    <div class="skill-category fade-in-up delay-2">
-                        <h3 class="category-title"><i class="fa-solid fa-toolbox"></i> Tools & Concepts</h3>
-
+                </div>
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-database"></i> Database & Tools</h3>
+                    <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Git & GitHub</span>
-                                <span>85%</span>
+                                <span class="skill-name"><i class="fas fa-database"></i> SQL Server</span>
+                                <span class="skill-percent">82%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="85%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Basic AI & ML Concepts</span>
-                                <span>65%</span>
+                                <span class="skill-name"><i class="fas fa-leaf"></i> MongoDB</span>
+                                <span class="skill-percent">75%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="65%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
                             </div>
                         </div>
-
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Object-Oriented Programming</span>
-                                <span>90%</span>
+                                <span class="skill-name"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+                                <span class="skill-percent">85%</span>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" data-width="90%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-docker"></i> Docker</span>
+                                <span class="skill-percent">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Project Section -->
-        <section id="projects" class="featured-project section">
-            <div class="container">
-                <div class="section-title fade-in-up">
-                    <span class="num">03.</span>
-                    <h2>Projects</h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="featured-project-card fade-in-up">
+    <!-- ====== PROJECTS SECTION ====== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;Projects /&gt;</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal" data-category="fullstack">
                     <div class="project-image">
-                        <div class="image-overlay"></div>
-                        <img src="assets/ecommerce-demo.jpg" alt="Full Stack E-commerce Platform"
-                            onerror="this.src='https://via.placeholder.com/600x400/1e293b/0ea5e9?text=E-commerce+Platform';">
-                    </div>
-                    <div class="project-content">
-                        <p class="project-overline">Featured Work</p>
-                        <h3 class="project-title">Full Stack E-commerce Platform</h3>
-                        <div class="project-description">
-                            <p>
-                                A comprehensive, fully responsive e-commerce web application featuring secure user
-                                authentication, product catalogue management, shopping cart functionality, and
-                                streamlined checkout processes. Built focusing on clean architecture and high
-                                performance.
-                            </p>
+                        <div class="project-placeholder">
+                            <i class="fas fa-sign-in-alt"></i>
                         </div>
-                        <ul class="project-tech-list">
-                            <li>C#</li>
-                            <li>ASP.NET Core API</li>
-                            <li>SQL Server</li>
-                            <li>HTML/CSS/JS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="#" class="btn-icon" aria-label="GitHub Repository" title="View Source"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="#" class="btn-icon" aria-label="Live Demo" title="Visit Site"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <div class="project-overlay">
+                            <a href="https://yassen2005.github.io/wewa_project-login-page-/" class="project-link" title="View Project" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/yassen2005/wewa_project-login-page-" class="project-link" title="View Code" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Wewa Login Page</h3>
+                        <p class="project-desc">A responsive and visually appealing login and registration page with modern UI aesthetics.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-category="desktop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/yassen2005/vacuum-cleaner" class="project-link" title="View Code" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Vacuum Cleaner Simulation</h3>
+                        <p class="project-desc">A Python simulation of a robotic vacuum cleaner navigating a room, cleaning dirt, and managing its battery with a visual interface.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                            <span>GUI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="desktop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/yassen2005/tic-tac-toe" class="project-link" title="View Code" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Tic Tac Toe AI Game</h3>
+                        <p class="project-desc">A classic Tic Tac Toe game featuring an AI opponent with multiple difficulty levels (easy, medium, hard) using decision-making logic.</p>
+                        <div class="project-tech">
+                            <span>Python / C++</span>
+                            <span>AI Algorithms</span>
+                            <span>Game Logic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Task Management Dashboard</h3>
+                        <p class="project-desc">Real-time collaborative task management tool with drag-and-drop kanban
+                            boards and team analytics.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET</span>
+                            <span>SignalR</span>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Chat Application</h3>
+                        <p class="project-desc">Real-time messaging platform with user authentication, private channels, and file sharing.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Socket.io</span>
+                            <span>React</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="container">
-                <div class="contact-wrapper fade-in-up">
-                    <p class="contact-overline">04. What's Next?</p>
-                    <h2 class="contact-title">Get In Touch</h2>
-                    <p class="contact-desc">
-                        Although I'm not currently looking for any new opportunities, my inbox is always open. Whether
-                        you have a question, a project idea, or just want to say hi, I'll try my best to get back to
-                        you!
-                    </p>
-
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+    <!-- ====== CONTACT SECTION ====== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;Contact /&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a project in mind or want to collaborate? Let's talk!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <div>
+                            <h4>Email Me</h4>
+                            <a href="mailto:yassenshazly253@gmail.com">yassenshazly253@gmail.com</a>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="Hello Yassen, I'd like to talk about..."></textarea>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            Send Message <i class="fa-regular fa-paper-plane" style="margin-left: 8px;"></i>
-                        </button>
-                    </form>
+                        <div>
+                            <h4>Call Me</h4>
+                            <a href="tel:+2001159478308">01159478308</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Egypt</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/yassen2005" class="social-link" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yassen-aboelhassan/" class="social-link" target="_blank"
+                            title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/2001159478308" class="social-link" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/" class="social-link" target="_blank" title="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper textarea-wrapper">
+                            <i class="fas fa-comment-dots"></i>
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container container-footer">
-            <div class="social-links">
-                <a href="https://github.com/yassen2005?tab=repositories" aria-label="GitHub" target="_blank"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yassen-aboelhassan/" aria-label="LinkedIn" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="mailto:yassenshazly253@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>YS<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-text">Crafting digital experiences with passion and precision.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/yassen2005" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yassen-aboelhassan/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/2001159478308" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Yassen Aboelhassan. All rights reserved.</p>
             </div>
-            <p class="footer-text">
-                Designed & Built by Yassen Shazly
-            </p>
-            <p class="copyright">
-                &copy; <span id="year"></span> All Rights Reserved
-            </p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 
